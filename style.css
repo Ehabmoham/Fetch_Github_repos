@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: #f5f5f5;
+}
+
+.app{
+    width: 600px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.app .header{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.app .header input,
+.app .header button{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.app .header input{
+    width: 80%;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.app .header button{
+   background-color: #009688;
+   color: white;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.app .repos-container{
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.app .repos-container .no-repos{
+    display: block;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.app .repos-container .repo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.app .repos-container .repo p{
+    font-size: 14px;
+    margin: 0;
+}   
+
+.app .repos-container .repo .options{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.app .repos-container .repo .options .star{
+    display: block;
+    background-color: #2196F3;
+    color: white;
+    padding: 5px;
+    border-radius: 2px;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.app .repos-container .repo .options a{
+    text-decoration: none;
+    background-color: #E91E63;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+}
+
+
+@media(max-width: 767px){
+
+    .app{
+        width: 90%;
+    }
+
+    .app .header{
+        flex-direction: column;
+    }
+
+    .app .header input,
+    .app .header button{
+        width: 100%;
+    }
+
+    .app .repos-container .repo{
+        flex-direction: column;
+    }
+
+    .app .repos-container .repo p{
+        width: 100%;
+        text-align: center;
+        overflow-x: auto;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+}
+
+.failed{
+    display: none;
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f5c2c7;
+    margin-top: 10px;
+    width: 600px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
